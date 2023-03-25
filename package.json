@@ -1,0 +1,48 @@
+{
+    "name": "fastest-file-share",
+    "displayName": "Fastest File Share",
+    "publisher": "SubhasishSwarnakar",
+    "description": "Share any file from vs code with others just in seconds",
+    "icon": "images/icon1.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/subha-code/FastestFileSearch.git"
+    },
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.76.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:fastest-file-share.shareFile"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [{
+            "command": "fastest-file-share.shareFile",
+            "title": "Fastest File Share"
+        }]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "16.x",
+        "@types/vscode": "^1.76.0",
+        "@vscode/test-electron": "^2.3.0",
+        "eslint": "^8.36.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "opn": "^6.0.0",
+        "request": "^2.88.2"
+    }
+}
